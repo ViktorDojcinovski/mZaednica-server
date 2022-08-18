@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/subventions",
+      "handler": "subvention.find",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subventions/count",
+      "handler": "subvention.count",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subventions/:id",
+      "handler": "subvention.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/subventions",
+      "handler": "subvention.create",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/subventions/:id",
+      "handler": "subvention.update",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/subventions/:id",
+      "handler": "subvention.delete",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    }
+  ]
+}

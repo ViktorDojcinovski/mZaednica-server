@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_fields_date_fields",
+  "info": {
+    "name": "DateField",
+    "icon": "calendar-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "isRequired": {
+      "type": "boolean",
+      "required": true
+    },
+    "fieldLabel": {
+      "type": "string"
+    },
+    "value": {
+      "type": "date",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subvention_requests",
+  "info": {
+    "name": "Subvention Request",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "subvention": {
+      "model": "subvention"
+    },
+    "fields": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.media-field",
+        "fields.multiple-media-field",
+        "fields.rich-text-field",
+        "fields.text-field",
+        "fields.dropdown-field"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "submitted",
+        "approved",
+        "denied"
+      ],
+      "default": "submitted"
+    }
+  }
+}

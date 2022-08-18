@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "municipalities",
+  "info": {
+    "name": "Municipality",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hasCard": {
+      "type": "boolean"
+    }
+  }
+}

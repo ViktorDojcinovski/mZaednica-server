@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/subvention-request-comments",
+      "handler": "subvention-request-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subvention-request-comments/count",
+      "handler": "subvention-request-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subvention-request-comments/:id",
+      "handler": "subvention-request-comment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/subvention-request-comments",
+      "handler": "subvention-request-comment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/subvention-request-comments/:id",
+      "handler": "subvention-request-comment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/subvention-request-comments/:id",
+      "handler": "subvention-request-comment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/predefined-responses",
+      "handler": "predefined-response.find",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/predefined-responses/count",
+      "handler": "predefined-response.count",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/predefined-responses/:id",
+      "handler": "predefined-response.findOne",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/predefined-responses",
+      "handler": "predefined-response.create",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/predefined-responses/:id",
+      "handler": "predefined-response.update",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/predefined-responses/:id",
+      "handler": "predefined-response.delete",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isAdmin"]
+      }
+    }
+  ]
+}

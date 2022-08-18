@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/report-comments",
+      "handler": "report-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/report-comments/count",
+      "handler": "report-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/report-comments/:id",
+      "handler": "report-comment.findOne",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/report-comments",
+      "handler": "report-comment.create",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/report-comments/:id",
+      "handler": "report-comment.update",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/report-comments/:id",
+      "handler": "report-comment.delete",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_fields_boolean_fields",
+  "info": {
+    "name": "BooleanField",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "boolean"
+    },
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "fieldLabel": {
+      "type": "string"
+    },
+    "isRequired": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subvention_request_comments",
+  "info": {
+    "name": "Subvention Request Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "subventionRequest": {
+      "model": "subvention-request"
+    },
+    "commentType": {
+      "type": "enumeration",
+      "enum": [
+        "comment",
+        "status_change"
+      ]
+    },
+    "newStatus": {
+      "type": "enumeration",
+      "enum": [
+        "submitted",
+        "approved",
+        "denied"
+      ]
+    }
+  }
+}

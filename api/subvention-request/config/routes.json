@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/subvention-requests",
+      "handler": "subvention-request.find",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete", "filterOwn"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subvention-requests/count",
+      "handler": "subvention-request.count",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subvention-requests/:id",
+      "handler": "subvention-request.findOne",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/subvention-requests",
+      "handler": "subvention-request.create",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/subvention-requests/:id",
+      "handler": "subvention-request.update",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/subvention-requests/:id",
+      "handler": "subvention-request.delete",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+There has been a new report to the SSM app with the following content:
+
+<%- reportType %>
+<%- description %>

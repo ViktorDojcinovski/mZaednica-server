@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_data_lat_lngs",
+  "info": {
+    "name": "LatLng",
+    "icon": "map-marker-alt"
+  },
+  "options": {},
+  "attributes": {
+    "longitude": {
+      "type": "float",
+      "required": true
+    },
+    "latitude": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

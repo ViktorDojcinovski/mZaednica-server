@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/reports",
+      "handler": "report.find",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reports/count",
+      "handler": "report.count",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reports/:id",
+      "handler": "report.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/reports",
+      "handler": "report.create",
+      "config": {
+        "policies": ["global::isAuthenticated", "global::isProfileComplete"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/reports/:id",
+      "handler": "report.update",
+      "config": {
+        "policies": ["editPermission"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/reports/:id",
+      "handler": "report.delete",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    }
+  ]
+}

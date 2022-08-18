@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_fields_dropdown_fields",
+  "info": {
+    "name": "DropdownField",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "isRequired": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "fieldLabel": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json",
+      "required": true
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

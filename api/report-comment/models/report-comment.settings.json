@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_comments",
+  "info": {
+    "name": "Report Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "report": {
+      "model": "report"
+    },
+    "commentType": {
+      "type": "enumeration",
+      "enum": [
+        "comment",
+        "status_change"
+      ],
+      "default": "comment",
+      "required": true
+    },
+    "newStatus": {
+      "type": "enumeration",
+      "enum": [
+        "reported",
+        "in_progress",
+        "closed"
+      ]
+    }
+  }
+}

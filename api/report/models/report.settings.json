@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "name": "Report",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "reportType": {
+      "type": "enumeration",
+      "enum": [
+        "problem",
+        "suggestion"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "reported",
+        "in_progress",
+        "closed"
+      ],
+      "default": "reported",
+      "required": true
+    },
+    "reporter": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "category": {
+      "model": "category"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "municipality": {
+      "model": "municipality"
+    },
+    "supportCount": {
+      "type": "integer",
+      "default": 0,
+      "required": false,
+      "min": 0
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "data.location-data"
+    },
+    "popularity": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true
+    }
+  }
+}

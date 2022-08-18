@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "predefined_responses",
+  "info": {
+    "name": "Predefined Response",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "municipality": {
+      "model": "municipality"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/news-items",
+      "handler": "news-item.find",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/news-items/count",
+      "handler": "news-item.count",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/news-items/:id",
+      "handler": "news-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/news-items",
+      "handler": "news-item.create",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/news-items/:id",
+      "handler": "news-item.update",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/news-items/:id",
+      "handler": "news-item.delete",
+      "config": {
+        "policies": ["global::isAuthenticated"]
+      }
+    }
+  ]
+}

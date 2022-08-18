@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enrolments",
+  "info": {
+    "name": "Enrolment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fields": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.date-field",
+        "fields.dropdown-field",
+        "fields.media-field",
+        "fields.multiple-media-field",
+        "fields.rich-text-field",
+        "fields.text-field",
+        "fields.boolean-field"
+      ]
+    },
+    "fieldsParents": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.boolean-field",
+        "fields.multiple-media-field",
+        "fields.text-field",
+        "fields.date-field",
+        "fields.dropdown-field",
+        "fields.rich-text-field",
+        "fields.media-field"
+      ]
+    },
+    "fieldsSocial": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.boolean-field",
+        "fields.multiple-media-field",
+        "fields.text-field",
+        "fields.date-field",
+        "fields.dropdown-field",
+        "fields.rich-text-field",
+        "fields.media-field"
+      ]
+    },
+    "fieldsHealth": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.boolean-field",
+        "fields.multiple-media-field",
+        "fields.text-field",
+        "fields.date-field",
+        "fields.dropdown-field",
+        "fields.rich-text-field",
+        "fields.media-field"
+      ]
+    }
+  }
+}

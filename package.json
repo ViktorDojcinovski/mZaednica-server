@@ -1,0 +1,48 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "apple-sign-in-rest": "^1.0.2",
+    "dayjs": "^1.11.4",
+    "firebase-admin": "9.5.0",
+    "knex": "<0.20.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.5.1",
+    "read-excel-file": "^5.4.4",
+    "sqlite3": "5.0.0",
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-provider-email-nodemailer": "3.5.4",
+    "strapi-utils": "3.5.4",
+    "uuid": "^3.4.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "67dd442f-76e6-4267-b53a-e735b7a99726"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "workspaces": [
+    "plugins/*"
+  ],
+  "license": "MIT"
+}

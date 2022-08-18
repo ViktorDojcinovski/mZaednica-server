@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/educational-facilities",
+      "handler": "educational-facility.find",
+      "config": {
+        "policies": ["global::filterMunicipality"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/educational-facilities/count",
+      "handler": "educational-facility.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/educational-facilities/:id",
+      "handler": "educational-facility.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/educational-facilities",
+      "handler": "educational-facility.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/educational-facilities/:id",
+      "handler": "educational-facility.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/educational-facilities/:id",
+      "handler": "educational-facility.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

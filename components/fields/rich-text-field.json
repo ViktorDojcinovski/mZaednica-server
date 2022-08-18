@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_fields_rich_text_fields",
+  "info": {
+    "name": "RichTextField",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "richtext"
+    },
+    "isRequired": {
+      "type": "boolean"
+    },
+    "fieldLabel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

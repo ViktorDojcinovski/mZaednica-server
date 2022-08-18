@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_supports",
+  "info": {
+    "name": "Report Support",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "report": {
+      "model": "report"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

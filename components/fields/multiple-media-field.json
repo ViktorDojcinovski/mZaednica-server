@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_fields_multiple_media_fields",
+  "info": {
+    "name": "MultipleMediaField",
+    "icon": "photo-video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "minAmount": {
+      "type": "integer"
+    },
+    "maxAmount": {
+      "type": "integer"
+    },
+    "fieldLabel": {
+      "type": "string"
+    }
+  }
+}

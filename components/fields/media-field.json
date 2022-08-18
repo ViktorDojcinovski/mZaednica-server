@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_fields_media_fields",
+  "info": {
+    "name": "MediaField",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "required": true
+    },
+    "isRequired": {
+      "type": "boolean"
+    },
+    "value": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "fieldLabel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

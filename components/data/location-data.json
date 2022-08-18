@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_data_location_data",
+  "info": {
+    "name": "Location Data",
+    "icon": "map-marked-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "latLng": {
+      "type": "component",
+      "repeatable": false,
+      "component": "data.lat-lng"
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}

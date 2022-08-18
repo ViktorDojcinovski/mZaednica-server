@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/enrolment-requests",
+      "handler": "enrolment-requests.find",
+      "config": {
+        "policies": ["global::filterEducationalFacility"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enrolment-requests/count",
+      "handler": "enrolment-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enrolment-requests/:id",
+      "handler": "enrolment-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/enrolment-requests",
+      "handler": "enrolment-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/enrolment-requests/:id",
+      "handler": "enrolment-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/enrolment-requests/:id",
+      "handler": "enrolment-requests.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

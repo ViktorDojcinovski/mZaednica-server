@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/enrolments",
+      "handler": "enrolment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enrolments/count",
+      "handler": "enrolment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enrolments/:id",
+      "handler": "enrolment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/enrolments",
+      "handler": "enrolment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/enrolments/:id",
+      "handler": "enrolment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/enrolments/:id",
+      "handler": "enrolment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

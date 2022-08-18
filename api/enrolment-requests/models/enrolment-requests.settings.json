@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enrolment_requests",
+  "info": {
+    "name": "Enrolment Requests",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "enrolment": {
+      "model": "enrolment"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "submitted",
+        "confirmed",
+        "unconfirmed"
+      ],
+      "default": "unconfirmed"
+    },
+    "fields": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.text-field",
+        "fields.rich-text-field",
+        "fields.multiple-media-field",
+        "fields.media-field",
+        "fields.dropdown-field",
+        "fields.boolean-field",
+        "fields.date-field"
+      ]
+    },
+    "educational_facility": {
+      "model": "educational-facility"
+    },
+    "fieldsParents": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.boolean-field",
+        "fields.multiple-media-field",
+        "fields.text-field",
+        "fields.date-field",
+        "fields.dropdown-field",
+        "fields.rich-text-field",
+        "fields.media-field"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "embg": {
+      "type": "string",
+      "unique": true
+    },
+    "meetingDate": {
+      "type": "date"
+    },
+    "meetingStartTime": {
+      "type": "datetime"
+    },
+    "meetingEndTime": {
+      "type": "datetime"
+    },
+    "fatherName": {
+      "type": "string"
+    },
+    "motherName": {
+      "type": "string"
+    },
+    "old_educational_facility": {
+      "type": "string"
+    }
+  }
+}

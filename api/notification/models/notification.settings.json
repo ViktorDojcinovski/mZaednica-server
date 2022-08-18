@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "Notification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "data": {
+      "type": "json"
+    },
+    "seen": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "NEW_NEWS_ITEM",
+        "NEW_SUBVENTION_ITEM",
+        "NEW_REPORT_ITEM",
+        "REPORT_STATUS_CHANGED",
+        "REPORT_NEW_COMMENT",
+        "REPORT_SHARE",
+        "REPORT_NEW_REQUEST_COMMENT"
+      ],
+      "required": true
+    },
+    "user": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "global": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "municipality": {
+      "model": "municipality"
+    }
+  }
+}

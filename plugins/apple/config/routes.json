@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/callback",
+      "handler": "apple.callback",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

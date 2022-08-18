@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_fields_text_fields",
+  "info": {
+    "name": "TextField",
+    "icon": "font",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fieldName": {
+      "type": "string"
+    },
+    "isRequired": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "validation": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "email",
+        "embg",
+        "bankId",
+        "phone"
+      ]
+    },
+    "fieldLabel": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

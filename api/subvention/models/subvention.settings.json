@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subventions",
+  "info": {
+    "name": "Subvention",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "dateFrom": {
+      "type": "date"
+    },
+    "dueDate": {
+      "type": "datetime"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "featuredImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "municipality": {
+      "model": "municipality"
+    },
+    "fields": {
+      "type": "dynamiczone",
+      "components": [
+        "fields.media-field",
+        "fields.multiple-media-field",
+        "fields.rich-text-field",
+        "fields.text-field",
+        "fields.dropdown-field"
+      ],
+      "required": true
+    }
+  }
+}
